@@ -1,4 +1,4 @@
-# Comment TODO Reorder
+# Reorderable TODOs
 
 Drag-and-drop **or** <kbd>Alt</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd> to re-order the
 comment lines that follow any `TODO` anchor.
