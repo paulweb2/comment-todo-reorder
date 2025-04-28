@@ -1,0 +1,40 @@
+{
+  "name": "hello-todo",
+  "version": "0.0.2",
+  "main": "./extension.js",
+  "engines": { "vscode": "^1.70.0" },
+
+  "activationEvents": [
+    "onCommand:todo.gotoBlock",
+    "onCommand:todo.scan",
+    "onCommand:todo.moveUp",
+    "onCommand:todo.moveDown",
+    "onView:todo.view"
+  ],
+
+  "contributes": {
+    "views": {
+      "explorer": [
+        { "id": "todo.view", "name": "TODO Blocks" }
+      ]
+    },
+    "commands": [
+      { "command": "todo.gotoBlock", "title": "TODO: Go to Block" },
+      { "command": "todo.scan",    "title": "TODO: Scan Current File" },
+      { "command": "todo.moveUp",  "title": "TODO: Move Item Up"     },
+      { "command": "todo.moveDown","title": "TODO: Move Item Down"   }
+    ],
+    "keybindings": [
+      {
+        "command": "todo.moveUp",
+        "key": "alt+up",
+        "when": "editorTextFocus && todoInFocus"
+      },
+      {
+        "command": "todo.moveDown",
+        "key": "alt+down",
+        "when": "editorTextFocus && todoInFocus"
+      }
+    ]
+  }
+}
