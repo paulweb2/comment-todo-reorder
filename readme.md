@@ -21,7 +21,7 @@ comment lines that follow any `TODO` anchor.
 
 ### Installation
 ```bash
-git clone https://github.com/<you>/comment-todo-reorder
+git clone https://github.com/paulweb2/comment-todo-reorder
 cd comment-todo-reorder
 npm install
 npx vsce package           # creates .vsix

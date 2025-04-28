@@ -1,9 +1,15 @@
 {
-  "name": "hello-todo",
-  "version": "0.0.2",
+  "name": "comment-todo-reorder",
+  "displayName": "Reorderable TODOs",
+  "description": "Drag‑and‑drop and Alt‑Arrow re‑ordering for TODO comment blocks.",
+  "version": "0.1.0",
+  "publisher": "your‑publisherId",
   "main": "./extension.js",
   "engines": { "vscode": "^1.70.0" },
-
+  "icon": "icon.png",
+  "categories": ["Other"],
+  "repository": { "type": "git", "url": "https://github.com/paulweb2/comment-todo-reorder" },
+  "license": "MIT",
   "activationEvents": [
     "onCommand:todo.gotoBlock",
     "onCommand:todo.scan",
@@ -36,5 +42,9 @@
         "when": "editorTextFocus && todoInFocus"
       }
     ]
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
   }
 }
