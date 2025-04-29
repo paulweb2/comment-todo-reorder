@@ -3,7 +3,7 @@
   "displayName": "Reorderable TODOs",
   "description": "Drag‑and‑drop and Alt‑Arrow re‑ordering for TODO comment blocks.",
   "version": "0.1.0",
-  "publisher": "your‑publisherId",
+  "publisher": "pwebtech",
   "main": "./extension.js",
   "engines": { "vscode": "^1.70.0" },
   "icon": "icon.png",
