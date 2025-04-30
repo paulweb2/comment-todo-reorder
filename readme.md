@@ -3,7 +3,7 @@
 Drag-and-drop **or** <kbd>Alt</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd> to re-order the
 comment lines that follow any `TODO` anchor.
 
-![demo gif](docs/demo.gif) <!-- optional -->
+![demo gif](demo.gif)
 
 ---
 
