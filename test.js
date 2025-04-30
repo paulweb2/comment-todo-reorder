@@ -1,6 +1,6 @@
 // TODO: improve widget
-//  – add dark mode
 //  – make aria-label
+//  – add dark mode
 /* TODO: second block example
    – item A
    – item B

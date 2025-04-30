@@ -130,9 +130,9 @@ class TodoProvider {
         block: node.block,
         item: idx,
         command: {
-          command: 'revealLine',
+          command: 'todo.gotoLine',
           title: '',
-          arguments: [{ lineNumber: it.line, at: 'center' }]
+          arguments: [it.line]
         }
       }));
     }
@@ -203,7 +203,6 @@ async function moveSelection(dir) {
 
 /* ───────────────────────── activate entry ──────────────────────── */
 function activate(context) {
-
   const provider = new TodoProvider();
   const view = vscode.window.createTreeView('todo.view',
     { treeDataProvider: provider, dragAndDropController: dnd });
@@ -223,6 +222,17 @@ function activate(context) {
         vscode.commands.executeCommand('revealLine', { lineNumber: anchor, at: 'center' });
         ed.selection = new vscode.Selection(anchor, 0, anchor, 0);
       });
+    }),
+    vscode.commands.registerCommand('todo.gotoLine', (line) => {
+      const editor = vscode.window.activeTextEditor;
+      if (!editor) return;
+
+      const position = new vscode.Position(line, 0);
+      editor.selection = new vscode.Selection(position, position);
+      editor.revealRange(
+        new vscode.Range(position, position),
+        vscode.TextEditorRevealType.InCenter
+      );
     })
   );
 
